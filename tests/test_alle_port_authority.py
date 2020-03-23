@@ -21,6 +21,7 @@ parsed_items = [item for item in spider.parse(test_response)]
 
 freezer.stop()
 
+
 def test_title():
     assert parsed_items[0]["title"] == "Planning and Stakeholder Relations Committee"
 
@@ -34,7 +35,7 @@ def test_start():
 
 
 def test_end():
-    assert parsed_items[0]["end"] == None
+    assert parsed_items[0]["end"] is None
 
 
 def test_time_notes():
@@ -54,8 +55,11 @@ def test_location():
         "name": "Neal H. Holmes Board Room, 5th floor",
         "address": "345 Sixth Avenue, Pittsburgh, PA, 15222"
         }
+
+
 def test_source():
     assert parsed_items[0]["source"] == "https://www.portauthority.org/inside-Port-Authority/Port-Authority-Board/Board-Meeting-Information/"
+
 
 def test_links():
     assert parsed_items[0]["links"] == [{

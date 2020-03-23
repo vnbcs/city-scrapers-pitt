@@ -1,7 +1,8 @@
+import dateutil
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
-import dateutil
+
 
 class AllePortAuthoritySpider(CityScrapersSpider):
     name = "alle_port_authority"
