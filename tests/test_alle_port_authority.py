@@ -10,7 +10,7 @@ from city_scrapers.spiders.alle_port_authority import AllePortAuthoritySpider
 
 test_response = file_response(
     join(dirname(__file__), "files", "alle_port_authority.html"),
-    url=
+    url =
     "https://www.portauthority.org/inside-Port-Authority/Port-Authority-Board/Board-Meeting-Information/"
 )
 spider = AllePortAuthoritySpider()
