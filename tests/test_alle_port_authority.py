@@ -10,7 +10,8 @@ from city_scrapers.spiders.alle_port_authority import AllePortAuthoritySpider
 
 test_response = file_response(
     join(dirname(__file__), "files", "alle_port_authority.html"),
-    url="https://www.portauthority.org/inside-Port-Authority/Port-Authority-Board/Board-Meeting-Information/"
+    url=
+    "https://www.portauthority.org/inside-Port-Authority/Port-Authority-Board/Board-Meeting-Information/"
 )
 spider = AllePortAuthoritySpider()
 
@@ -43,7 +44,8 @@ def test_time_notes():
 
 
 def test_id():
-    assert parsed_items[0]["id"] == 'alle_port_authority/202001170830/x/planning_and_stakeholder_relations_committee'
+    assert parsed_items[0][
+        "id"] == 'alle_port_authority/202001170830/x/planning_and_stakeholder_relations_committee'
 
 
 def test_status():
@@ -54,18 +56,17 @@ def test_location():
     assert parsed_items[0]["location"] == {
         "name": "Neal H. Holmes Board Room, 5th floor",
         "address": "345 Sixth Avenue, Pittsburgh, PA, 15222"
-        }
+    }
 
 
 def test_source():
-    assert parsed_items[0]["source"] == "https://www.portauthority.org/inside-Port-Authority/Port-Authority-Board/Board-Meeting-Information/"
+    assert parsed_items[0][
+        "source"
+    ] == "https://www.portauthority.org/inside-Port-Authority/Port-Authority-Board/Board-Meeting-Information/"
 
 
 def test_links():
-    assert parsed_items[0]["links"] == [{
-        "href": "",
-        "title": ""
-        }]
+    assert parsed_items[0]["links"] == [{"href": "", "title": ""}]
 
 
 def test_classification():

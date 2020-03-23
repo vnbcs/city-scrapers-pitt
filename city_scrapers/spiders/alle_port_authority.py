@@ -8,7 +8,9 @@ class AllePortAuthoritySpider(CityScrapersSpider):
     name = "alle_port_authority"
     agency = "Port Authority of Allegheny County"
     timezone = "America/New_York"
-    start_urls = ["https://www.portauthority.org/inside-Port-Authority/Port-Authority-Board/Board-Meeting-Information/"]
+    start_urls = [
+        "https://www.portauthority.org/inside-Port-Authority/Port-Authority-Board/Board-Meeting-Information/"
+    ]
 
     def parse(self, response):
         """
