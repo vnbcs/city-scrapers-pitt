@@ -8,11 +8,15 @@ from freezegun import freeze_time
 
 from city_scrapers.spiders.alle_port_authority import AllePortAuthoritySpider
 
-test_response = file_response(
-    join(dirname(__file__), "files", "alle_port_authority.html"),
-    url =
-    "https://www.portauthority.org/inside-Port-Authority/Port-Authority-Board/Board-Meeting-Information/"
+SOURCE = (
+    "https://www.portauthority.org"
+    "/inside-Port-Authority/"
+    "Port-Authority-Board/"
+    "Board-Meeting-Information/"
 )
+
+test_response = file_response(join(dirname(__file__), "files", "alle_port_authority.html"), SOURCE)
+
 spider = AllePortAuthoritySpider()
 
 freezer = freeze_time("2020-03-06")
@@ -62,7 +66,8 @@ def test_location():
 def test_source():
     assert parsed_items[0][
         "source"
-    ] == "https://www.portauthority.org/inside-Port-Authority/Port-Authority-Board/Board-Meeting-Information/"
+        ] == ("https://www.portauthority.org"
+              + "/inside-Port-Authority/Port-Authority-Board/Board-Meeting-Information/")
 
 
 def test_links():
