@@ -129,13 +129,14 @@ Familiarize yourself with how we workPermalink
 Please read the project’s CONTRIBUTING.md file to learn about how we use GitHub to manage the project and our pull request policy.
 
 ### Spider Setup
-1. Find an open issue to work on:
+#### 1. Find an open issue to work on:
 
 First, find an issue within the project’s [issue tracker](https://github.com/pgh-public-meetings/city-scrapers-pitt/issues). If the issue does not have a [pull request](https://github.com/pgh-public-meetings/city-scrapers-pitt/pulls) and has no one working on it, go ahead and leave a comment to the effect of "I'm working on this". If someone has been working on the spider, but it has been more than 3-4 months since they updated anything, feel free to continue their work on that spider or start your own solution.
 
 As an example we will use the Urban Redevelopment Authority of Pittsburgh, or URA for short. It has an [issue](https://github.com/pgh-public-meetings/city-scrapers-pitt/issues/5). Someone started work on it but appears to have moved on to other commitments. I'll leave a comment and proceed to step 2.
 
-2. Create a new branch
+#### 2. Create a new branch
+
 Before leaving the master branch, sync your fork to the project's repository. This will save time later on when trying to add your spider to the project. To do this run:
 
 ```bash
